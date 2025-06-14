@@ -5,10 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npx vite build",
+    "build": "chmod +x node_modules/.bin/vite && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-     "postinstall": "chmod +x ./node_modules/.bin/vite"
+     "vercel-build": "npm ci && npm run build"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.3",
